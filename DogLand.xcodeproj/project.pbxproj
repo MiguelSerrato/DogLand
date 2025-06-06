@@ -6,8 +6,19 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		E675BA902DF39743005A7FC2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E675BA2E2DF24419005A7FC2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E675BA352DF24419005A7FC2;
+			remoteInfo = DogLand;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		E675BA362DF24419005A7FC2 /* DogLand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DogLand.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E675BA8C2DF39743005A7FC2 /* DogLandTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DogLandTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -16,10 +27,22 @@
 			path = DogLand;
 			sourceTree = "<group>";
 		};
+		E675BA8D2DF39743005A7FC2 /* DogLandTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = DogLandTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		E675BA332DF24419005A7FC2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E675BA892DF39743005A7FC2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				E675BA382DF24419005A7FC2 /* DogLand */,
+				E675BA8D2DF39743005A7FC2 /* DogLandTests */,
 				E675BA372DF24419005A7FC2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				E675BA362DF24419005A7FC2 /* DogLand.app */,
+				E675BA8C2DF39743005A7FC2 /* DogLandTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +95,29 @@
 			productReference = E675BA362DF24419005A7FC2 /* DogLand.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E675BA8B2DF39743005A7FC2 /* DogLandTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E675BA922DF39743005A7FC2 /* Build configuration list for PBXNativeTarget "DogLandTests" */;
+			buildPhases = (
+				E675BA882DF39743005A7FC2 /* Sources */,
+				E675BA892DF39743005A7FC2 /* Frameworks */,
+				E675BA8A2DF39743005A7FC2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E675BA912DF39743005A7FC2 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				E675BA8D2DF39743005A7FC2 /* DogLandTests */,
+			);
+			name = DogLandTests;
+			packageProductDependencies = (
+			);
+			productName = DogLandTests;
+			productReference = E675BA8C2DF39743005A7FC2 /* DogLandTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -82,6 +130,10 @@
 				TargetAttributes = {
 					E675BA352DF24419005A7FC2 = {
 						CreatedOnToolsVersion = 16.4;
+					};
+					E675BA8B2DF39743005A7FC2 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = E675BA352DF24419005A7FC2;
 					};
 				};
 			};
@@ -100,12 +152,20 @@
 			projectRoot = "";
 			targets = (
 				E675BA352DF24419005A7FC2 /* DogLand */,
+				E675BA8B2DF39743005A7FC2 /* DogLandTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		E675BA342DF24419005A7FC2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E675BA8A2DF39743005A7FC2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +182,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E675BA882DF39743005A7FC2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E675BA912DF39743005A7FC2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E675BA352DF24419005A7FC2 /* DogLand */;
+			targetProxy = E675BA902DF39743005A7FC2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		E675BA3F2DF2441C005A7FC2 /* Debug */ = {
@@ -298,6 +373,40 @@
 			};
 			name = Release;
 		};
+		E675BA932DF39743005A7FC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.serrato.DogLandTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DogLand.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DogLand";
+			};
+			name = Debug;
+		};
+		E675BA942DF39743005A7FC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.serrato.DogLandTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DogLand.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DogLand";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -315,6 +424,15 @@
 			buildConfigurations = (
 				E675BA422DF2441C005A7FC2 /* Debug */,
 				E675BA432DF2441C005A7FC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E675BA922DF39743005A7FC2 /* Build configuration list for PBXNativeTarget "DogLandTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E675BA932DF39743005A7FC2 /* Debug */,
+				E675BA942DF39743005A7FC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
