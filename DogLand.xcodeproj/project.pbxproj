@@ -98,14 +98,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E619DCDD2DF40CF300073973 /* TestPlan */ = {
-			isa = PBXGroup;
-			children = (
-				E619DCDC2DF405A400073973 /* DogLand.xctestplan */,
-			);
-			path = TestPlan;
-			sourceTree = "<group>";
-		};
 		E619DCDE2DF4104400073973 /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,7 +224,6 @@
 		E660F4202DF3FB10004AB273 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E619DCDD2DF40CF300073973 /* TestPlan */,
 				E660F41F2DF3FB10004AB273 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -255,6 +246,7 @@
 		E675BA2D2DF24419005A7FC2 = {
 			isa = PBXGroup;
 			children = (
+				E619DCDC2DF405A400073973 /* DogLand.xctestplan */,
 				E660F4232DF3FB10004AB273 /* DogLand */,
 				E660F4122DF3FB07004AB273 /* DogLandTests */,
 				E660F40A2DF3FAF9004AB273 /* DogLandUITests */,
