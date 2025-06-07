@@ -9,21 +9,14 @@ import Foundation
 @testable import DogLand
 
 class MockDogDataSource: CoreDataDogDataSource {
-    private var dogs: [DogDTO] = []
+    private var dogs: [Dog] = []
     
-    func saveDogs(_ dogs: [DogDTO]) async {
+    func saveDogs(_ dogs: [Dog]) async {
         self.dogs = dogs
     }
     
     func fetchDogs() async -> [Dog] {
-        return dogs.compactMap { dog in
-            Dog(
-                name: dog.dogName ?? "",
-                age: Int(dog.age ?? 0),
-                description: dog.description ?? "",
-                image: dog.image ?? ""
-            )
-        }
+        return dogs
     }
     
     func deleteAllDogs() async {

@@ -8,7 +8,7 @@
 import Foundation
 
 protocol CoreDataDogDataSource {
-    func saveDogs(_ dogs: [DogDTO]) async
+    func saveDogs(_ dogs: [Dog]) async
     func fetchDogs() async -> [Dog]
     func deleteAllDogs() async
 }

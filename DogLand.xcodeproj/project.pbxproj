@@ -14,8 +14,6 @@
 		E619DCF52DF4281700073973 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E619DCF42DF4281700073973 /* CoreDataStack.swift */; };
 		E619DCF72DF428C300073973 /* CoreDataDogDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E619DCF62DF428C300073973 /* CoreDataDogDataSourceTests.swift */; };
 		E619DCF92DF429F700073973 /* MockDogSataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E619DCF82DF429F700073973 /* MockDogSataSource.swift */; };
-		E619DCFC2DF431BF00073973 /* DogEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E619DCFA2DF431BF00073973 /* DogEntity+CoreDataClass.swift */; };
-		E619DCFD2DF431BF00073973 /* DogEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E619DCFB2DF431BF00073973 /* DogEntity+CoreDataProperties.swift */; };
 		E619DD002DF43DBE00073973 /* DogRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E619DCFF2DF43DBE00073973 /* DogRepository.swift */; };
 		E619DD032DF43E8000073973 /* DogRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E619DD022DF43E8000073973 /* DogRepositoryImpl.swift */; };
 		E619DD052DF4750F00073973 /* MockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E619DD042DF4750F00073973 /* MockAPIClient.swift */; };
@@ -37,6 +35,11 @@
 		E6EE7ED92DF48F7D00757B97 /* DogListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EE7ED82DF48F7D00757B97 /* DogListViewModel.swift */; };
 		E6EE7EDB2DF48FDD00757B97 /* MockFetchDogsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EE7EDA2DF48FDD00757B97 /* MockFetchDogsUseCase.swift */; };
 		E6EE7EDD2DF4904400757B97 /* DogListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EE7EDC2DF4904400757B97 /* DogListViewModelTests.swift */; };
+		E6EE7EE02DF4987400757B97 /* DogListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EE7EDF2DF4987400757B97 /* DogListView.swift */; };
+		E6EE7EE22DF49A1800757B97 /* DogListModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EE7EE12DF49A1800757B97 /* DogListModuleFactory.swift */; };
+		E6EE7EE42DF49C0800757B97 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EE7EE32DF49C0800757B97 /* HomeView.swift */; };
+		E6EE7EE72DF4A61F00757B97 /* DogEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EE7EE52DF4A61F00757B97 /* DogEntity+CoreDataClass.swift */; };
+		E6EE7EE82DF4A61F00757B97 /* DogEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EE7EE62DF4A61F00757B97 /* DogEntity+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,8 +68,6 @@
 		E619DCF42DF4281700073973 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		E619DCF62DF428C300073973 /* CoreDataDogDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDogDataSourceTests.swift; sourceTree = "<group>"; };
 		E619DCF82DF429F700073973 /* MockDogSataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDogSataSource.swift; sourceTree = "<group>"; };
-		E619DCFA2DF431BF00073973 /* DogEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DogEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
-		E619DCFB2DF431BF00073973 /* DogEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DogEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E619DCFF2DF43DBE00073973 /* DogRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogRepository.swift; sourceTree = "<group>"; };
 		E619DD022DF43E8000073973 /* DogRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogRepositoryImpl.swift; sourceTree = "<group>"; };
 		E619DD042DF4750F00073973 /* MockAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIClient.swift; sourceTree = "<group>"; };
@@ -91,6 +92,11 @@
 		E6EE7ED82DF48F7D00757B97 /* DogListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogListViewModel.swift; sourceTree = "<group>"; };
 		E6EE7EDA2DF48FDD00757B97 /* MockFetchDogsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFetchDogsUseCase.swift; sourceTree = "<group>"; };
 		E6EE7EDC2DF4904400757B97 /* DogListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogListViewModelTests.swift; sourceTree = "<group>"; };
+		E6EE7EDF2DF4987400757B97 /* DogListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogListView.swift; sourceTree = "<group>"; };
+		E6EE7EE12DF49A1800757B97 /* DogListModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogListModuleFactory.swift; sourceTree = "<group>"; };
+		E6EE7EE32DF49C0800757B97 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E6EE7EE52DF4A61F00757B97 /* DogEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DogEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E6EE7EE62DF4A61F00757B97 /* DogEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DogEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,8 +237,8 @@
 		E660F41B2DF3FB10004AB273 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E619DCFA2DF431BF00073973 /* DogEntity+CoreDataClass.swift */,
-				E619DCFB2DF431BF00073973 /* DogEntity+CoreDataProperties.swift */,
+				E6EE7EE52DF4A61F00757B97 /* DogEntity+CoreDataClass.swift */,
+				E6EE7EE62DF4A61F00757B97 /* DogEntity+CoreDataProperties.swift */,
 				E660F41A2DF3FB10004AB273 /* DogDTO.swift */,
 			);
 			path = Models;
@@ -262,6 +268,7 @@
 		E660F41E2DF3FB10004AB273 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				E6EE7EDE2DF4983D00757B97 /* Views */,
 				E6EE7ED72DF48F6200757B97 /* ViewModels */,
 			);
 			path = Presentation;
@@ -324,6 +331,16 @@
 				E6EE7ED82DF48F7D00757B97 /* DogListViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E6EE7EDE2DF4983D00757B97 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E6EE7EDF2DF4987400757B97 /* DogListView.swift */,
+				E6EE7EE12DF49A1800757B97 /* DogListModuleFactory.swift */,
+				E6EE7EE32DF49C0800757B97 /* HomeView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -470,14 +487,17 @@
 				E619DCF52DF4281700073973 /* CoreDataStack.swift in Sources */,
 				E660F4272DF3FB10004AB273 /* DogDTO.swift in Sources */,
 				E619DCEF2DF420F700073973 /* Dog.swift in Sources */,
+				E6EE7EE72DF4A61F00757B97 /* DogEntity+CoreDataClass.swift in Sources */,
+				E6EE7EE82DF4A61F00757B97 /* DogEntity+CoreDataProperties.swift in Sources */,
 				E619DCE42DF4144400073973 /* DataModel.xcdatamodeld in Sources */,
+				E6EE7EE22DF49A1800757B97 /* DogListModuleFactory.swift in Sources */,
 				E6EE7ED22DF488A400757B97 /* FetchDogsUseCase.swift in Sources */,
 				E660F4282DF3FB10004AB273 /* ContentView.swift in Sources */,
-				E619DCFC2DF431BF00073973 /* DogEntity+CoreDataClass.swift in Sources */,
-				E619DCFD2DF431BF00073973 /* DogEntity+CoreDataProperties.swift in Sources */,
 				E619DCF32DF424DA00073973 /* CoreDataDogDataSource.swift in Sources */,
 				E619DD002DF43DBE00073973 /* DogRepository.swift in Sources */,
+				E6EE7EE02DF4987400757B97 /* DogListView.swift in Sources */,
 				E660F4292DF3FB10004AB273 /* DogLandApp.swift in Sources */,
+				E6EE7EE42DF49C0800757B97 /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
