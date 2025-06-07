@@ -24,6 +24,11 @@ jobs:
           find . -name "*.xcodeproj"
           find . -name "*.swift"
 
+      - name: Clean Derived Data
+        run: |
+          rm -rf ~/Library/Developer/Xcode/DerivedData
+
+
 
       - name: Run Unit Tests (XCTest) with Code Coverage
         run: |
