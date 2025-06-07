@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 63;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -38,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E619DCDC2DF405A400073973 /* DogLand.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = DogLand.xctestplan; sourceTree = "<group>"; };
 		E660F4082DF3FAF9004AB273 /* DogLandUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogLandUITests.swift; sourceTree = "<group>"; };
 		E660F4092DF3FAF9004AB273 /* DogLandUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogLandUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E660F40D2DF3FB07004AB273 /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
@@ -186,6 +187,7 @@
 		E675BA2D2DF24419005A7FC2 = {
 			isa = PBXGroup;
 			children = (
+				E619DCDC2DF405A400073973 /* DogLand.xctestplan */,
 				E660F4232DF3FB10004AB273 /* DogLand */,
 				E660F4122DF3FB07004AB273 /* DogLandTests */,
 				E660F40A2DF3FAF9004AB273 /* DogLandUITests */,
@@ -515,6 +517,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -546,6 +549,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
