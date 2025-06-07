@@ -13,7 +13,11 @@ protocol URLSessionProtocol {
 
 extension URLSession: URLSessionProtocol {}
 
-final class APIClient {
+protocol APIClient {
+    func request<T: Codable>(endpoint: EndpointRepresentable) async throws -> T
+}
+
+final class APIClientImpl: APIClient {
     private let session: URLSessionProtocol
     private let baseURL: URL
 

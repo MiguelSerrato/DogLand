@@ -25,7 +25,7 @@ final class APIClientTests: XCTestCase {
         mockSession.responseToReturn = HTTPURLResponse(url: URL(string: "https://test.com")!,
                                                        statusCode: 200, httpVersion: nil, headerFields: nil)!
         
-        let client = APIClient(session: mockSession, baseURL: URL(string: "https://test.com")!)
+        let client = APIClientImpl(session: mockSession, baseURL: URL(string: "https://test.com")!)
         let result: [DogDTO] = try await client.request(endpoint: Endpoint.dogs)
         
         XCTAssertEqual(result.first, expectedDog)
@@ -36,7 +36,7 @@ final class APIClientTests: XCTestCase {
         session.dataToReturn = Data()
         session.responseToReturn = HTTPURLResponse(url: URL(string: "https://test.com")!, statusCode: 404, httpVersion: nil, headerFields: nil)!
         
-        let client = APIClient(session: session, baseURL: URL(string: "https://test.com")!)
+        let client = APIClientImpl(session: session, baseURL: URL(string: "https://test.com")!)
         
         do {
             let _: [DogDTO] = try await client.request(endpoint: Endpoint.dogs)
@@ -51,7 +51,7 @@ final class APIClientTests: XCTestCase {
         session.dataToReturn = Data("invalid json".utf8)
         session.responseToReturn = HTTPURLResponse(url: URL(string: "https://test.com")!, statusCode: 200, httpVersion: nil, headerFields: nil)!
         
-        let client = APIClient(session: session, baseURL: URL(string: "https://test.com")!)
+        let client = APIClientImpl(session: session, baseURL: URL(string: "https://test.com")!)
         
         do {
             let _: [DogDTO] = try await client.request(endpoint: Endpoint.dogs)
@@ -65,7 +65,7 @@ final class APIClientTests: XCTestCase {
         let session = MockURLSession()
         session.errorToThrow = URLError(.timedOut)
         
-        let client = APIClient(session: session, baseURL: URL(string: "https://test.com")!)
+        let client = APIClientImpl(session: session, baseURL: URL(string: "https://test.com")!)
         
         do {
             let _: [DogDTO] = try await client.request(endpoint: Endpoint.dogs)
@@ -81,7 +81,7 @@ final class APIClientTests: XCTestCase {
         session.dataToReturn = try JSONEncoder().encode([expectedDog])
         session.responseToReturn = HTTPURLResponse(url: URL(string: "https://test.com")!, statusCode: 200, httpVersion: nil, headerFields: nil)!
         
-        let client = APIClient(session: session, baseURL: URL(string: "https://test.com")!)
+        let client = APIClientImpl(session: session, baseURL: URL(string: "https://test.com")!)
         let _: [DogDTO] = try await client.request(endpoint: Endpoint.dogs)
         
         XCTAssertEqual(session.lastRequest?.httpMethod, "GET")
