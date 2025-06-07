@@ -20,13 +20,13 @@ final class APIClientTests: XCTestCase {
     
     func testAPIClientFetchesDogsSuccessfully() async throws {
         let mockSession = MockURLSession()
-        let expectedDog = APIDog(dogName: "Firulais", description: "Homeless dog", age: 4, image: "https://www.test.com")
+        let expectedDog = DogDTO(dogName: "Firulais", description: "Homeless dog", age: 4, image: "https://www.test.com")
         mockSession.dataToReturn = try! JSONEncoder().encode([expectedDog])
         mockSession.responseToReturn = HTTPURLResponse(url: URL(string: "https://test.com")!,
                                                        statusCode: 200, httpVersion: nil, headerFields: nil)!
         
         let client = APIClient(session: mockSession, baseURL: URL(string: "https://test.com")!)
-        let result: [APIDog] = try await client.request(endpoint: Endpoint.dogs)
+        let result: [DogDTO] = try await client.request(endpoint: Endpoint.dogs)
         
         XCTAssertEqual(result.first, expectedDog)
     }
@@ -39,7 +39,7 @@ final class APIClientTests: XCTestCase {
         let client = APIClient(session: session, baseURL: URL(string: "https://test.com")!)
         
         do {
-            let _: [APIDog] = try await client.request(endpoint: Endpoint.dogs)
+            let _: [DogDTO] = try await client.request(endpoint: Endpoint.dogs)
             XCTFail("Expected to throw")
         } catch {
             XCTAssertTrue(error is URLError)
@@ -54,7 +54,7 @@ final class APIClientTests: XCTestCase {
         let client = APIClient(session: session, baseURL: URL(string: "https://test.com")!)
         
         do {
-            let _: [APIDog] = try await client.request(endpoint: Endpoint.dogs)
+            let _: [DogDTO] = try await client.request(endpoint: Endpoint.dogs)
             XCTFail("Expected decoding error")
         } catch {
             XCTAssertTrue(error is DecodingError)
@@ -68,7 +68,7 @@ final class APIClientTests: XCTestCase {
         let client = APIClient(session: session, baseURL: URL(string: "https://test.com")!)
         
         do {
-            let _: [APIDog] = try await client.request(endpoint: Endpoint.dogs)
+            let _: [DogDTO] = try await client.request(endpoint: Endpoint.dogs)
             XCTFail("Expected network error")
         } catch {
             XCTAssertEqual((error as? URLError)?.code, .timedOut)
@@ -76,13 +76,13 @@ final class APIClientTests: XCTestCase {
     }
     
     func testRequestMethodAndPathAreCorrect() async throws {
-        let expectedDog = APIDog(dogName: "Firulais", description: "Homeless dog", age: 4, image: "https://www.test.com")
+        let expectedDog = DogDTO(dogName: "Firulais", description: "Homeless dog", age: 4, image: "https://www.test.com")
         let session = MockURLSession()
         session.dataToReturn = try JSONEncoder().encode([expectedDog])
         session.responseToReturn = HTTPURLResponse(url: URL(string: "https://test.com")!, statusCode: 200, httpVersion: nil, headerFields: nil)!
         
         let client = APIClient(session: session, baseURL: URL(string: "https://test.com")!)
-        let _: [APIDog] = try await client.request(endpoint: Endpoint.dogs)
+        let _: [DogDTO] = try await client.request(endpoint: Endpoint.dogs)
         
         XCTAssertEqual(session.lastRequest?.httpMethod, "GET")
         XCTAssertEqual(session.lastRequest?.url?.path, "/1151549092634943488")

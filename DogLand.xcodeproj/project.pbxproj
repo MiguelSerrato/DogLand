@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E619DCE42DF4144400073973 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E619DCE22DF4144400073973 /* DataModel.xcdatamodeld */; };
+		E619DCEF2DF420F700073973 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = E619DCEE2DF420F700073973 /* Dog.swift */; };
+		E619DCF12DF4243C00073973 /* CoreDataDogDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E619DCF02DF4243C00073973 /* CoreDataDogDataSourceImpl.swift */; };
+		E619DCF32DF424DA00073973 /* CoreDataDogDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E619DCF22DF424DA00073973 /* CoreDataDogDataSource.swift */; };
+		E619DCF52DF4281700073973 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E619DCF42DF4281700073973 /* CoreDataStack.swift */; };
+		E619DCF72DF428C300073973 /* CoreDataDogDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E619DCF62DF428C300073973 /* CoreDataDogDataSourceTests.swift */; };
+		E619DCF92DF429F700073973 /* MockDogSataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E619DCF82DF429F700073973 /* MockDogSataSource.swift */; };
+		E619DCFC2DF431BF00073973 /* DogEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E619DCFA2DF431BF00073973 /* DogEntity+CoreDataClass.swift */; };
+		E619DCFD2DF431BF00073973 /* DogEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E619DCFB2DF431BF00073973 /* DogEntity+CoreDataProperties.swift */; };
 		E660F40B2DF3FAF9004AB273 /* DogLandUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E660F4082DF3FAF9004AB273 /* DogLandUITests.swift */; };
 		E660F40C2DF3FAF9004AB273 /* DogLandUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E660F4092DF3FAF9004AB273 /* DogLandUITestsLaunchTests.swift */; };
 		E660F4132DF3FB07004AB273 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = E660F40D2DF3FB07004AB273 /* MockURLSession.swift */; };
@@ -15,7 +24,7 @@
 		E660F4242DF3FB10004AB273 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E660F41F2DF3FB10004AB273 /* Assets.xcassets */; };
 		E660F4252DF3FB10004AB273 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E660F4162DF3FB10004AB273 /* APIClient.swift */; };
 		E660F4262DF3FB10004AB273 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E660F4172DF3FB10004AB273 /* Endpoint.swift */; };
-		E660F4272DF3FB10004AB273 /* APIDog.swift in Sources */ = {isa = PBXBuildFile; fileRef = E660F41A2DF3FB10004AB273 /* APIDog.swift */; };
+		E660F4272DF3FB10004AB273 /* DogDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E660F41A2DF3FB10004AB273 /* DogDTO.swift */; };
 		E660F4282DF3FB10004AB273 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E660F4212DF3FB10004AB273 /* ContentView.swift */; };
 		E660F4292DF3FB10004AB273 /* DogLandApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E660F4222DF3FB10004AB273 /* DogLandApp.swift */; };
 /* End PBXBuildFile section */
@@ -39,6 +48,15 @@
 
 /* Begin PBXFileReference section */
 		E619DCDC2DF405A400073973 /* DogLand.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = DogLand.xctestplan; sourceTree = "<group>"; };
+		E619DCE32DF4144400073973 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		E619DCEE2DF420F700073973 /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
+		E619DCF02DF4243C00073973 /* CoreDataDogDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDogDataSourceImpl.swift; sourceTree = "<group>"; };
+		E619DCF22DF424DA00073973 /* CoreDataDogDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDogDataSource.swift; sourceTree = "<group>"; };
+		E619DCF42DF4281700073973 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		E619DCF62DF428C300073973 /* CoreDataDogDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDogDataSourceTests.swift; sourceTree = "<group>"; };
+		E619DCF82DF429F700073973 /* MockDogSataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDogSataSource.swift; sourceTree = "<group>"; };
+		E619DCFA2DF431BF00073973 /* DogEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DogEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E619DCFB2DF431BF00073973 /* DogEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DogEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E660F4082DF3FAF9004AB273 /* DogLandUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogLandUITests.swift; sourceTree = "<group>"; };
 		E660F4092DF3FAF9004AB273 /* DogLandUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogLandUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E660F40D2DF3FB07004AB273 /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
@@ -46,7 +64,7 @@
 		E660F4102DF3FB07004AB273 /* EndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointTests.swift; sourceTree = "<group>"; };
 		E660F4162DF3FB10004AB273 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		E660F4172DF3FB10004AB273 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
-		E660F41A2DF3FB10004AB273 /* APIDog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDog.swift; sourceTree = "<group>"; };
+		E660F41A2DF3FB10004AB273 /* DogDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogDTO.swift; sourceTree = "<group>"; };
 		E660F41F2DF3FB10004AB273 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E660F4212DF3FB10004AB273 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E660F4222DF3FB10004AB273 /* DogLandApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogLandApp.swift; sourceTree = "<group>"; };
@@ -80,6 +98,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E619DCDE2DF4104400073973 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				E619DCF42DF4281700073973 /* CoreDataStack.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		E619DCDF2DF4119600073973 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				E619DCE12DF411D900073973 /* CoreData */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		E619DCE02DF411AE00073973 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				E660F4162DF3FB10004AB273 /* APIClient.swift */,
+				E660F4172DF3FB10004AB273 /* Endpoint.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		E619DCE12DF411D900073973 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				E619DCE22DF4144400073973 /* DataModel.xcdatamodeld */,
+				E619DCF02DF4243C00073973 /* CoreDataDogDataSourceImpl.swift */,
+				E619DCF22DF424DA00073973 /* CoreDataDogDataSource.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		E619DCED2DF420DF00073973 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				E619DCEE2DF420F700073973 /* Dog.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		E660F40A2DF3FAF9004AB273 /* DogLandUITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				E660F40D2DF3FB07004AB273 /* MockURLSession.swift */,
+				E619DCF82DF429F700073973 /* MockDogSataSource.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -102,6 +164,7 @@
 			children = (
 				E660F40F2DF3FB07004AB273 /* APIClientTests.swift */,
 				E660F4102DF3FB07004AB273 /* EndpointTests.swift */,
+				E619DCF62DF428C300073973 /* CoreDataDogDataSourceTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -115,19 +178,10 @@
 			path = DogLandTests;
 			sourceTree = "<group>";
 		};
-		E660F4182DF3FB10004AB273 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				E660F4162DF3FB10004AB273 /* APIClient.swift */,
-				E660F4172DF3FB10004AB273 /* Endpoint.swift */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
 		E660F4192DF3FB10004AB273 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				E660F4182DF3FB10004AB273 /* Network */,
+				E619DCDE2DF4104400073973 /* Persistence */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -135,7 +189,9 @@
 		E660F41B2DF3FB10004AB273 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E660F41A2DF3FB10004AB273 /* APIDog.swift */,
+				E619DCFA2DF431BF00073973 /* DogEntity+CoreDataClass.swift */,
+				E619DCFB2DF431BF00073973 /* DogEntity+CoreDataProperties.swift */,
+				E660F41A2DF3FB10004AB273 /* DogDTO.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -143,6 +199,8 @@
 		E660F41C2DF3FB10004AB273 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				E619DCE02DF411AE00073973 /* Remote */,
+				E619DCDF2DF4119600073973 /* Local */,
 				E660F41B2DF3FB10004AB273 /* Models */,
 			);
 			path = Data;
@@ -151,6 +209,7 @@
 		E660F41D2DF3FB10004AB273 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				E619DCED2DF420DF00073973 /* Entities */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -341,10 +400,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E619DCF12DF4243C00073973 /* CoreDataDogDataSourceImpl.swift in Sources */,
 				E660F4252DF3FB10004AB273 /* APIClient.swift in Sources */,
 				E660F4262DF3FB10004AB273 /* Endpoint.swift in Sources */,
-				E660F4272DF3FB10004AB273 /* APIDog.swift in Sources */,
+				E619DCF52DF4281700073973 /* CoreDataStack.swift in Sources */,
+				E660F4272DF3FB10004AB273 /* DogDTO.swift in Sources */,
+				E619DCEF2DF420F700073973 /* Dog.swift in Sources */,
+				E619DCE42DF4144400073973 /* DataModel.xcdatamodeld in Sources */,
 				E660F4282DF3FB10004AB273 /* ContentView.swift in Sources */,
+				E619DCFC2DF431BF00073973 /* DogEntity+CoreDataClass.swift in Sources */,
+				E619DCFD2DF431BF00073973 /* DogEntity+CoreDataProperties.swift in Sources */,
+				E619DCF32DF424DA00073973 /* CoreDataDogDataSource.swift in Sources */,
 				E660F4292DF3FB10004AB273 /* DogLandApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,7 +419,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E619DCF72DF428C300073973 /* CoreDataDogDataSourceTests.swift in Sources */,
 				E660F4132DF3FB07004AB273 /* MockURLSession.swift in Sources */,
+				E619DCF92DF429F700073973 /* MockDogSataSource.swift in Sources */,
 				E660F4142DF3FB07004AB273 /* APIClientTests.swift in Sources */,
 				E660F4152DF3FB07004AB273 /* EndpointTests.swift in Sources */,
 			);
@@ -578,9 +646,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.serrato.DogLandTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DogLand.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DogLand";
 			};
 			name = Debug;
@@ -596,9 +668,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.serrato.DogLandTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DogLand.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DogLand";
 			};
 			name = Release;
@@ -613,9 +689,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.serrato.DogLandUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = DogLand;
 			};
 			name = Debug;
@@ -630,9 +710,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.serrato.DogLandUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = DogLand;
 			};
 			name = Release;
@@ -677,6 +761,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E619DCE22DF4144400073973 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E619DCE32DF4144400073973 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = E619DCE32DF4144400073973 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E675BA2E2DF24419005A7FC2 /* Project object */;
 }

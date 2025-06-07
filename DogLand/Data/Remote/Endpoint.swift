@@ -18,14 +18,14 @@ protocol EndpointRepresentable {
 
 enum Endpoint: EndpointRepresentable {
     case dogs
-    
+
     var path: String {
         switch self {
         case .dogs:
             return "/1151549092634943488"
         }
     }
-    
+
     var method: HTTPMethod {
         return .get
     }
