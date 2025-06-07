@@ -9,6 +9,7 @@
     }
   ],
   "defaultOptions" : {
+    "destination" : "useSchemeDestination",
     "targetForVariableExpansion" : {
       "containerPath" : "container:DogLand.xcodeproj",
       "identifier" : "E675BA352DF24419005A7FC2",
