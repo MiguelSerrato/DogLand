@@ -18,10 +18,13 @@ jobs:
       - name: Select Xcode 15.3
         run: sudo xcode-select -s /Applications/Xcode_15.3.app
 
-      - name: Show available schemes
-        run: xcodebuild -list -project DogLand.xcodeproj
+      - name: Show available destinations
+        run: |
+          xcodebuild -project DogLand.xcodeproj \
+            -scheme DogLand \
+            -showdestinations
 
-      - name: Run Unit Tests with Code Coverage
+      - name: Run All Tests Using Test Plan with Code Coverage
         run: |
           xcodebuild \
             -project DogLand.xcodeproj \
@@ -30,19 +33,7 @@ jobs:
             -destination 'platform=iOS Simulator,name=iPhone 14,OS=latest' \
             -enableCodeCoverage YES \
             clean test \
-            -only-testing:DogLandTests \
             -resultBundlePath TestResults
-
-      - name: Run UI Tests
-        run: |
-          xcodebuild \
-            -project DogLand.xcodeproj \
-            -scheme DogLand \
-            -sdk iphonesimulator \
-            -destination 'platform=iOS Simulator,name=iPhone 14,OS=latest' \
-            test \
-            -only-testing:DogLandUITests \
-            -resultBundlePath UITestResults
 
       - name: Extract Coverage Report
         run: |
@@ -60,4 +51,3 @@ jobs:
           name: Raw Test Results
           path: |
             TestResults.xcresult
-            UITestResults.xcresult
