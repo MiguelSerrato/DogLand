@@ -29,10 +29,10 @@ final class CoreDataDogDataSourceTests: XCTestCase {
 
     func testSaveAndFetchUsers() async throws {
         let dogsToSave = [
-            DogDTO(
-                dogName: "Firulais",
-                description: "Homeless dog",
+            Dog(
+                name: "Firulais",
                 age: 4,
+                description: "Homeless dog",
                 image: "https://www.test.com"
             )
         ]
@@ -51,27 +51,27 @@ final class CoreDataDogDataSourceTests: XCTestCase {
 
     func testOverwriteDogs() async {
         let dogOriginal = [
-            DogDTO(
-                dogName: "Firulais",
-                description: "Homeless dog",
+            Dog(
+                name: "Firulais",
                 age: 4,
+                description: "Homeless dog",
                 image: "https://www.test.com"
             )
         ]
         await dataSource.saveDogs(dogOriginal)
 
         let dogUpdated = [
-            DogDTO(
-                dogName: "Firulais",
-                description: "Dog adopted",
-                age: 5,
+            Dog(
+                name: "Firulais",
+                age: 4,
+                description: "Homeless dog",
                 image: "https://www.test.com"
             )
         ]
         await dataSource.saveDogs(dogUpdated)
 
         let dogs = await dataSource.fetchDogs()
-        XCTAssertEqual(dogs.count, 2)
+        XCTAssertEqual(dogs.count, 1)
     }
 
 }

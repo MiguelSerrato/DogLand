@@ -15,14 +15,21 @@ class CoreDataDogDataSourceImpl: CoreDataDogDataSource {
         self.context = context
     }
 
-    func saveDogs(_ dogs: [DogDTO]) async {
+    func saveDogs(_ dogs: [Dog]) async {
         await context.perform {
-            dogs.forEach { dog in
-                let entity = DogEntity(context: self.context)
-                entity.dogDescription = dog.description ?? ""
-                entity.dogName = dog.dogName ?? ""
-                entity.age = Int16(dog.age ?? 0)
-                entity.image = dog.image ?? ""
+            dogs.forEach { [weak self] dog in
+                if let self = self {
+                    let fetch = DogEntity.fetchRequest()
+                    fetch.predicate = NSPredicate(format: "dogId == %@", dog.id)
+                    
+                    if let existing = try? self.context.fetch(fetch).first {
+                        existing.fill(from: dog)
+                    } else {
+                        let entity = DogEntity(context: self.context)
+                        entity.fill(from: dog)
+                    }
+                }
+                
             }
             try? self.context.save()
         }
@@ -46,7 +53,7 @@ class CoreDataDogDataSourceImpl: CoreDataDogDataSource {
     func deleteAllDogs() async {
         await context.perform {
             let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "DogEntity")
-            fetchRequest.resultType = .managedObjectResultType // ✅ <-- clave
+            fetchRequest.resultType = .managedObjectResultType
             fetchRequest.includesPropertyValues = false
             fetchRequest.includesPendingChanges = false
             let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)

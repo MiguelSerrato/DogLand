@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct Dog: Identifiable {
-    var id: String { name }
+struct Dog: Identifiable, Equatable {
+    var id: String { "\(name)-\(age)-\(image.hashValue)-\(description)" }
     let name: String
     let age: Int
     let description: String

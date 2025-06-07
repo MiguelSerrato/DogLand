@@ -13,3 +13,13 @@ struct DogDTO: Codable, Equatable {
     let age: Int?
     let image: String?
 }
+extension DogDTO {
+    func toDomain() -> Dog {
+        Dog(
+            name: dogName ?? "",
+            age: age ?? 0,
+            description: description ?? "",
+            image: image ?? ""
+        )
+    }
+}

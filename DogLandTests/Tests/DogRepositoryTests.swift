@@ -23,10 +23,10 @@ final class DogRepositoryTests: XCTestCase {
         let mockAPI = MockAPIClient()
         let mockLocal = MockDogDataSource()
         await mockLocal.saveDogs([
-            DogDTO(
-                dogName: "Firulais",
-                description: "Dog adopted",
+            Dog(
+                name: "Firulais",
                 age: 5,
+                description: "Homeless dog",
                 image: "https://www.test.com"
             )
         ])
@@ -74,10 +74,10 @@ final class DogRepositoryTests: XCTestCase {
 
         let mockLocal = MockDogDataSource()
         await mockLocal.saveDogs([
-            DogDTO(
-                dogName: "Firulais",
-                description: "Dog adopted",
+            Dog(
+                name: "Firulais",
                 age: 5,
+                description: "Homeless dog",
                 image: "https://www.test.com"
             )
         ])
