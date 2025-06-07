@@ -30,7 +30,7 @@ jobs:
             -project DogLand.xcodeproj \
             -scheme DogLand \
             -sdk iphonesimulator \
-            -destination 'platform=iOS Simulator,name=iPhone 14,OS=latest' \
+            -destination 'platform=iOS Simulator,name=iPhone 15,OS=18.1' \
             -enableCodeCoverage YES \
             clean test \
             -resultBundlePath TestResults
