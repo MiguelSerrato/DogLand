@@ -31,6 +31,9 @@
 		E660F4272DF3FB10004AB273 /* DogDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E660F41A2DF3FB10004AB273 /* DogDTO.swift */; };
 		E660F4282DF3FB10004AB273 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E660F4212DF3FB10004AB273 /* ContentView.swift */; };
 		E660F4292DF3FB10004AB273 /* DogLandApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E660F4222DF3FB10004AB273 /* DogLandApp.swift */; };
+		E6EE7ED22DF488A400757B97 /* FetchDogsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EE7ED12DF488A400757B97 /* FetchDogsUseCase.swift */; };
+		E6EE7ED42DF488DB00757B97 /* MockDogRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EE7ED32DF488DB00757B97 /* MockDogRepository.swift */; };
+		E6EE7ED62DF4891E00757B97 /* FetchDogsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EE7ED52DF4891E00757B97 /* FetchDogsUseCaseTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +82,9 @@
 		E675BA362DF24419005A7FC2 /* DogLand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DogLand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E675BA8C2DF39743005A7FC2 /* DogLandTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DogLandTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E675BAB42DF3A086005A7FC2 /* DogLandUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DogLandUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6EE7ED12DF488A400757B97 /* FetchDogsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchDogsUseCase.swift; sourceTree = "<group>"; };
+		E6EE7ED32DF488DB00757B97 /* MockDogRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDogRepository.swift; sourceTree = "<group>"; };
+		E6EE7ED52DF4891E00757B97 /* FetchDogsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchDogsUseCaseTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +186,7 @@
 				E660F40D2DF3FB07004AB273 /* MockURLSession.swift */,
 				E619DCF82DF429F700073973 /* MockDogSataSource.swift */,
 				E619DD042DF4750F00073973 /* MockAPIClient.swift */,
+				E6EE7ED32DF488DB00757B97 /* MockDogRepository.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -191,6 +198,7 @@
 				E660F4102DF3FB07004AB273 /* EndpointTests.swift */,
 				E619DCF62DF428C300073973 /* CoreDataDogDataSourceTests.swift */,
 				E619DD062DF477D700073973 /* DogRepositoryTests.swift */,
+				E6EE7ED52DF4891E00757B97 /* FetchDogsUseCaseTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -236,6 +244,7 @@
 		E660F41D2DF3FB10004AB273 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				E6EE7ED02DF4884200757B97 /* UseCases */,
 				E619DCFE2DF43DA100073973 /* Repositories */,
 				E619DCED2DF420DF00073973 /* Entities */,
 			);
@@ -290,6 +299,14 @@
 				E675BAB42DF3A086005A7FC2 /* DogLandUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		E6EE7ED02DF4884200757B97 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				E6EE7ED12DF488A400757B97 /* FetchDogsUseCase.swift */,
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -436,6 +453,7 @@
 				E660F4272DF3FB10004AB273 /* DogDTO.swift in Sources */,
 				E619DCEF2DF420F700073973 /* Dog.swift in Sources */,
 				E619DCE42DF4144400073973 /* DataModel.xcdatamodeld in Sources */,
+				E6EE7ED22DF488A400757B97 /* FetchDogsUseCase.swift in Sources */,
 				E660F4282DF3FB10004AB273 /* ContentView.swift in Sources */,
 				E619DCFC2DF431BF00073973 /* DogEntity+CoreDataClass.swift in Sources */,
 				E619DCFD2DF431BF00073973 /* DogEntity+CoreDataProperties.swift in Sources */,
@@ -452,9 +470,11 @@
 				E619DCF72DF428C300073973 /* CoreDataDogDataSourceTests.swift in Sources */,
 				E660F4132DF3FB07004AB273 /* MockURLSession.swift in Sources */,
 				E619DCF92DF429F700073973 /* MockDogSataSource.swift in Sources */,
+				E6EE7ED62DF4891E00757B97 /* FetchDogsUseCaseTests.swift in Sources */,
 				E660F4142DF3FB07004AB273 /* APIClientTests.swift in Sources */,
 				E660F4152DF3FB07004AB273 /* EndpointTests.swift in Sources */,
 				E619DD052DF4750F00073973 /* MockAPIClient.swift in Sources */,
+				E6EE7ED42DF488DB00757B97 /* MockDogRepository.swift in Sources */,
 				E619DD072DF477D700073973 /* DogRepositoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
