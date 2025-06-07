@@ -18,6 +18,13 @@ jobs:
       - name: Select Xcode version
         run: sudo xcode-select -s /Applications/Xcode_15.3.app
 
+      - name: Debug project contents
+        run: |
+          ls -R
+          find . -name "*.xcodeproj"
+          find . -name "*.swift"
+
+
       - name: Run Unit Tests (XCTest) with Code Coverage
         run: |
           xcodebuild \
