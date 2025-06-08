@@ -21,6 +21,7 @@ struct DogListView<VM: DogListViewModelProtocol & ObservableObject>: View {
                         ProgressView("Loading Dogs...")
                             .padding()
                             .background(.clear)
+                            .frame(maxWidth: .infinity)
                     } else if let error = viewModel.errorMessage {
                         VStack {
                             Text("Error: \(error)")

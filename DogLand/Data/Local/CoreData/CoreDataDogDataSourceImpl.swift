@@ -15,24 +15,17 @@ class CoreDataDogDataSourceImpl: CoreDataDogDataSource {
         self.context = context
     }
 
-    func saveDogs(_ dogs: [Dog]) async {
-        await context.perform {
-            dogs.forEach { [weak self] dog in
-                if let self = self {
-                    let fetch = DogEntity.fetchRequest()
-                    fetch.predicate = NSPredicate(format: "dogId == %@", dog.id)
-                    
-                    if let existing = try? self.context.fetch(fetch).first {
-                        existing.fill(from: dog)
-                    } else {
-                        let entity = DogEntity(context: self.context)
-                        entity.fill(from: dog)
-                    }
-                }
-                
-            }
-            try? self.context.save()
+    func saveDogs(_ dogs: [Dog]) async throws {
+        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = DogEntity.fetchRequest()
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+        try context.execute(deleteRequest)
+        
+        for dog in dogs {
+            let entity = DogEntity(context: context)
+            entity.fill(from: dog)
         }
+        
+        try self.context.save()
     }
 
     func fetchDogs() async -> [Dog] {
