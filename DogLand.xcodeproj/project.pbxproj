@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E61496812DF4FE8400DC4117 /* DogRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61496802DF4FE8400DC4117 /* DogRowView.swift */; };
 		E619DCE42DF4144400073973 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E619DCE22DF4144400073973 /* DataModel.xcdatamodeld */; };
 		E619DCEF2DF420F700073973 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = E619DCEE2DF420F700073973 /* Dog.swift */; };
 		E619DCF12DF4243C00073973 /* CoreDataDogDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E619DCF02DF4243C00073973 /* CoreDataDogDataSourceImpl.swift */; };
@@ -18,8 +19,6 @@
 		E619DD032DF43E8000073973 /* DogRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E619DD022DF43E8000073973 /* DogRepositoryImpl.swift */; };
 		E619DD052DF4750F00073973 /* MockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E619DD042DF4750F00073973 /* MockAPIClient.swift */; };
 		E619DD072DF477D700073973 /* DogRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E619DD062DF477D700073973 /* DogRepositoryTests.swift */; };
-		E660F40B2DF3FAF9004AB273 /* DogLandUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E660F4082DF3FAF9004AB273 /* DogLandUITests.swift */; };
-		E660F40C2DF3FAF9004AB273 /* DogLandUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E660F4092DF3FAF9004AB273 /* DogLandUITestsLaunchTests.swift */; };
 		E660F4132DF3FB07004AB273 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = E660F40D2DF3FB07004AB273 /* MockURLSession.swift */; };
 		E660F4142DF3FB07004AB273 /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E660F40F2DF3FB07004AB273 /* APIClientTests.swift */; };
 		E660F4152DF3FB07004AB273 /* EndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E660F4102DF3FB07004AB273 /* EndpointTests.swift */; };
@@ -50,16 +49,10 @@
 			remoteGlobalIDString = E675BA352DF24419005A7FC2;
 			remoteInfo = DogLand;
 		};
-		E675BABA2DF3A086005A7FC2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E675BA2E2DF24419005A7FC2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E675BA352DF24419005A7FC2;
-			remoteInfo = DogLand;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E61496802DF4FE8400DC4117 /* DogRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogRowView.swift; sourceTree = "<group>"; };
 		E619DCDC2DF405A400073973 /* DogLand.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = DogLand.xctestplan; sourceTree = "<group>"; };
 		E619DCE32DF4144400073973 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		E619DCEE2DF420F700073973 /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
@@ -72,8 +65,6 @@
 		E619DD022DF43E8000073973 /* DogRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogRepositoryImpl.swift; sourceTree = "<group>"; };
 		E619DD042DF4750F00073973 /* MockAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIClient.swift; sourceTree = "<group>"; };
 		E619DD062DF477D700073973 /* DogRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogRepositoryTests.swift; sourceTree = "<group>"; };
-		E660F4082DF3FAF9004AB273 /* DogLandUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogLandUITests.swift; sourceTree = "<group>"; };
-		E660F4092DF3FAF9004AB273 /* DogLandUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogLandUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E660F40D2DF3FB07004AB273 /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
 		E660F40F2DF3FB07004AB273 /* APIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
 		E660F4102DF3FB07004AB273 /* EndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointTests.swift; sourceTree = "<group>"; };
@@ -85,7 +76,6 @@
 		E660F4222DF3FB10004AB273 /* DogLandApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogLandApp.swift; sourceTree = "<group>"; };
 		E675BA362DF24419005A7FC2 /* DogLand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DogLand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E675BA8C2DF39743005A7FC2 /* DogLandTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DogLandTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E675BAB42DF3A086005A7FC2 /* DogLandUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DogLandUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6EE7ED12DF488A400757B97 /* FetchDogsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchDogsUseCase.swift; sourceTree = "<group>"; };
 		E6EE7ED32DF488DB00757B97 /* MockDogRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDogRepository.swift; sourceTree = "<group>"; };
 		E6EE7ED52DF4891E00757B97 /* FetchDogsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchDogsUseCaseTests.swift; sourceTree = "<group>"; };
@@ -108,13 +98,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E675BA892DF39743005A7FC2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E675BAB12DF3A086005A7FC2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -181,15 +164,6 @@
 				E619DD022DF43E8000073973 /* DogRepositoryImpl.swift */,
 			);
 			path = Repositories;
-			sourceTree = "<group>";
-		};
-		E660F40A2DF3FAF9004AB273 /* DogLandUITests */ = {
-			isa = PBXGroup;
-			children = (
-				E660F4082DF3FAF9004AB273 /* DogLandUITests.swift */,
-				E660F4092DF3FAF9004AB273 /* DogLandUITestsLaunchTests.swift */,
-			);
-			path = DogLandUITests;
 			sourceTree = "<group>";
 		};
 		E660F40E2DF3FB07004AB273 /* Mocks */ = {
@@ -302,7 +276,6 @@
 				E619DCDC2DF405A400073973 /* DogLand.xctestplan */,
 				E660F4232DF3FB10004AB273 /* DogLand */,
 				E660F4122DF3FB07004AB273 /* DogLandTests */,
-				E660F40A2DF3FAF9004AB273 /* DogLandUITests */,
 				E675BA372DF24419005A7FC2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -312,7 +285,6 @@
 			children = (
 				E675BA362DF24419005A7FC2 /* DogLand.app */,
 				E675BA8C2DF39743005A7FC2 /* DogLandTests.xctest */,
-				E675BAB42DF3A086005A7FC2 /* DogLandUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -339,6 +311,7 @@
 				E6EE7EDF2DF4987400757B97 /* DogListView.swift */,
 				E6EE7EE12DF49A1800757B97 /* DogListModuleFactory.swift */,
 				E6EE7EE32DF49C0800757B97 /* HomeView.swift */,
+				E61496802DF4FE8400DC4117 /* DogRowView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -385,26 +358,6 @@
 			productReference = E675BA8C2DF39743005A7FC2 /* DogLandTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		E675BAB32DF3A086005A7FC2 /* DogLandUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E675BABE2DF3A086005A7FC2 /* Build configuration list for PBXNativeTarget "DogLandUITests" */;
-			buildPhases = (
-				E675BAB02DF3A086005A7FC2 /* Sources */,
-				E675BAB12DF3A086005A7FC2 /* Frameworks */,
-				E675BAB22DF3A086005A7FC2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E675BABB2DF3A086005A7FC2 /* PBXTargetDependency */,
-			);
-			name = DogLandUITests;
-			packageProductDependencies = (
-			);
-			productName = DogLandUITests;
-			productReference = E675BAB42DF3A086005A7FC2 /* DogLandUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -419,10 +372,6 @@
 						CreatedOnToolsVersion = 16.4;
 					};
 					E675BA8B2DF39743005A7FC2 = {
-						CreatedOnToolsVersion = 16.4;
-						TestTargetID = E675BA352DF24419005A7FC2;
-					};
-					E675BAB32DF3A086005A7FC2 = {
 						CreatedOnToolsVersion = 16.4;
 						TestTargetID = E675BA352DF24419005A7FC2;
 					};
@@ -444,7 +393,6 @@
 			targets = (
 				E675BA352DF24419005A7FC2 /* DogLand */,
 				E675BA8B2DF39743005A7FC2 /* DogLandTests */,
-				E675BAB32DF3A086005A7FC2 /* DogLandUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -465,13 +413,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E675BAB22DF3A086005A7FC2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -483,6 +424,7 @@
 				E660F4252DF3FB10004AB273 /* APIClient.swift in Sources */,
 				E619DD032DF43E8000073973 /* DogRepositoryImpl.swift in Sources */,
 				E6EE7ED92DF48F7D00757B97 /* DogListViewModel.swift in Sources */,
+				E61496812DF4FE8400DC4117 /* DogRowView.swift in Sources */,
 				E660F4262DF3FB10004AB273 /* Endpoint.swift in Sources */,
 				E619DCF52DF4281700073973 /* CoreDataStack.swift in Sources */,
 				E660F4272DF3FB10004AB273 /* DogDTO.swift in Sources */,
@@ -519,15 +461,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E675BAB02DF3A086005A7FC2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E660F40B2DF3FAF9004AB273 /* DogLandUITests.swift in Sources */,
-				E660F40C2DF3FAF9004AB273 /* DogLandUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -535,11 +468,6 @@
 			isa = PBXTargetDependency;
 			target = E675BA352DF24419005A7FC2 /* DogLand */;
 			targetProxy = E675BA902DF39743005A7FC2 /* PBXContainerItemProxy */;
-		};
-		E675BABB2DF3A086005A7FC2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E675BA352DF24419005A7FC2 /* DogLand */;
-			targetProxy = E675BABA2DF3A086005A7FC2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -771,48 +699,6 @@
 			};
 			name = Release;
 		};
-		E675BABC2DF3A086005A7FC2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.serrato.DogLandUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				TEST_TARGET_NAME = DogLand;
-			};
-			name = Debug;
-		};
-		E675BABD2DF3A086005A7FC2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.serrato.DogLandUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				TEST_TARGET_NAME = DogLand;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -839,15 +725,6 @@
 			buildConfigurations = (
 				E675BA932DF39743005A7FC2 /* Debug */,
 				E675BA942DF39743005A7FC2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E675BABE2DF3A086005A7FC2 /* Build configuration list for PBXNativeTarget "DogLandUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E675BABC2DF3A086005A7FC2 /* Debug */,
-				E675BABD2DF3A086005A7FC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

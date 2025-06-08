@@ -8,7 +8,15 @@
 import Foundation
 
 @MainActor
-final class DogListViewModel: ObservableObject {
+protocol DogListViewModelProtocol: ObservableObject {
+    var dogs: [Dog] { get }
+    var isLoading: Bool { get }
+    var errorMessage: String? { get }
+    func loadDogs(forceRefresh: Bool) async
+}
+
+@MainActor
+class DogListViewModel: DogListViewModelProtocol {
     @Published var dogs: [Dog] = []
     @Published var isLoading = false
     @Published var errorMessage: String?

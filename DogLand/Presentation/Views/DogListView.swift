@@ -7,80 +7,62 @@
 
 import SwiftUI
 
-struct DogListView: View {
-    @StateObject var viewModel: DogListViewModel
+struct DogListView<VM: DogListViewModelProtocol & ObservableObject>: View {
+    @StateObject var viewModel: VM
     @State private var hasLoaded = false
-    
+
+    @Environment(\.dismiss) private var dismiss
+
     var body: some View {
-        NavigationView {
-            Group {
-                if viewModel.isLoading {
-                    ProgressView("Cargando perros...")
-                } else if let error = viewModel.errorMessage {
-                    VStack {
-                        Text("Error: \(error)")
-                            .foregroundColor(.red)
-                            .multilineTextAlignment(.center)
-                        Button("Reintentar") {
-                            Task {
-                                await viewModel.loadDogs()
+        NavigationStack {
+            ScrollView {
+                VStack(spacing: 16) {
+                    if viewModel.isLoading {
+                        ProgressView("Loading Dogs...")
+                            .padding()
+                            .background(.clear)
+                    } else if let error = viewModel.errorMessage {
+                        VStack {
+                            Text("Error: \(error)")
+                                .foregroundColor(.red)
+                            Button("Reintentar") {
+                                Task {
+                                    await viewModel.loadDogs(forceRefresh: false)
+                                }
                             }
+                            .padding(.top)
                         }
-                        .padding(.top)
+                    } else {
+                        ForEach(viewModel.dogs) { dog in
+                            DogRowView(dog: dog)
+                        }
                     }
-                } else {
-                    List(viewModel.dogs) { dog in
-                        DogRowView(dog: dog)
+                }
+                .padding(.horizontal)
+                .padding(.top)
+            }
+            .background(.lightGray)
+            .navigationTitle("Dogs We Love")
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarBackButtonHidden(true)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(action: {
+                        dismiss()
+                    }) {
+                        HStack {
+                            Image(systemName: "chevron.left")
+                        }
+                        .foregroundColor(.darkGray)
                     }
                 }
             }
-            .listStyle(.plain)
-            .navigationTitle("Dogs We Love")
             .task {
                 if !hasLoaded {
                     hasLoaded = true
-                    await viewModel.loadDogs()
+                    await viewModel.loadDogs(forceRefresh: false)
                 }
             }
         }
     }
-}
-
-struct DogRowView: View {
-    let dog: Dog
-    
-    var body: some View {
-        HStack(alignment: .top, spacing: 16) {
-            AsyncImage(url: URL(string: dog.image)) { image in
-                image
-                    .resizable()
-                    .scaledToFill()
-            } placeholder: {
-                Color.gray.opacity(0.2)
-            }
-            .frame(width: 100, height: 140)
-            .cornerRadius(12)
-            .clipped()
-            
-            VStack(alignment: .leading, spacing: 6) {
-                Text(dog.name)
-                    .font(.title3)
-                    .fontWeight(.semibold)
-                
-                Text(dog.description)
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
-                
-                Text("Almost \(dog.age) years")
-                    .font(.subheadline)
-                    .fontWeight(.bold)
-                    .padding(.top, 6)
-            }
-        }
-        .padding(.vertical, 8)
-    }
-}
-
-#Preview {
-    //DogListView()
 }
