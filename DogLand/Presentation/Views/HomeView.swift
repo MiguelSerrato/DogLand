@@ -29,15 +29,45 @@ struct HomeView: View {
     
     var body: some View {
         NavigationStack {
-            VStack {
-                Text("Bienvenido a la app de perros")
-                    .font(.title)
+            VStack(spacing: 24) {
+                Spacer()
                 
-                NavigationLink("Ver perros disponibles") {
-                    DogListModuleFactory.make()
+                VStack(spacing: 12) {
+                    Image(systemName: "pawprint.fill")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 80, height: 80)
+                        .foregroundColor(.accentColor)
+                    
+                    Text("Welcome to DogLand")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .multilineTextAlignment(.center)
+                    
+                    Text("Check out all the dogs available for adoption!")
+                        .font(.body)
+                        .foregroundColor(.gray)
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal, 32)
                 }
-                .padding()
+                
+                Spacer()
+                
+                NavigationLink(destination: DogListModuleFactory.make()) {
+                    Text("Dogs 🐶")
+                        .fontWeight(.semibold)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.accentColor)
+                        .foregroundColor(.white)
+                        .cornerRadius(12)
+                        .padding(.horizontal, 40)
+                }
+                
+                Spacer()
             }
+            .padding()
+            .background(Color.lightGray)
         }
     }
 }

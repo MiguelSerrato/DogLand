@@ -25,7 +25,7 @@ final class DogRepositoryImpl: DogRepository {
         }
         let endpoint: EndpointRepresentable = Endpoint.dogs
         let remoteData: [DogDTO] = try await remote.request(endpoint: endpoint)
-        await local.saveDogs(remoteData.map { $0.toDomain() })
+        try await local.saveDogs(remoteData.map { $0.toDomain() })
         return await local.fetchDogs()
 
     }
