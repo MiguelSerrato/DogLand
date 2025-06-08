@@ -8,6 +8,25 @@
 import SwiftUI
 
 struct HomeView: View {
+    init() {
+        configureNavigationAppearance()
+    }
+    
+    func configureNavigationAppearance() {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = .clear
+        appearance.shadowColor = .clear
+        
+        appearance.titleTextAttributes = [
+            .font: UIFont.systemFont(ofSize: 24, weight: .medium),
+            .foregroundColor: UIColor(named: "DarkGray")!
+        ]
+        
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
+    }
+    
     var body: some View {
         NavigationStack {
             VStack {

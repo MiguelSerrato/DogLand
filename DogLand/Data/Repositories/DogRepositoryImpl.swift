@@ -20,11 +20,9 @@ final class DogRepositoryImpl: DogRepository {
         if !forceRefresh {
             let localData = await local.fetchDogs()
             if !localData.isEmpty {
-                print("desde local")
                 return localData
             }
         }
-        print("desde remoto")
         let endpoint: EndpointRepresentable = Endpoint.dogs
         let remoteData: [DogDTO] = try await remote.request(endpoint: endpoint)
         await local.saveDogs(remoteData.map { $0.toDomain() })

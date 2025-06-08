@@ -24,14 +24,6 @@
         "identifier" : "E675BA8B2DF39743005A7FC2",
         "name" : "DogLandTests"
       }
-    },
-    {
-      "parallelizable" : true,
-      "target" : {
-        "containerPath" : "container:DogLand.xcodeproj",
-        "identifier" : "E675BAB32DF3A086005A7FC2",
-        "name" : "DogLandUITests"
-      }
     }
   ],
   "version" : 1
